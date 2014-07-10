@@ -36,8 +36,7 @@ let printval (document: BsonDocument) =
 (* Connect to Mongo Server which should just be a process running on the machine *)
 //let connectionString = "mongodb://localhost"
 //let server = MongoServer.Create connectionString (local db)
-let mongodb = "mongodb://dbuser:admin@flame.mongohq.com:27094/formationsApp"
-// example: mongodb://username:password@flame.mongohq.com:portnumber/databasename
+let mongodb = "db"
 let server = MongoServer.Create mongodb
 server.Connect
 (* Get Database *)
@@ -100,9 +99,9 @@ type formation = { SequenceID : string;
 let seqID = Guid.NewGuid().ToString("N")
 let formationID = Guid.NewGuid().ToString("N")
 
-let p = { UserName = "cameron.frederick@gmail.com"; Password = "cam2378"; }
+let p = { UserName = "email@gmail.com"; Password = "password"; }
 
-let s = { SequenceID = seqID; User = "cameron.frederick@gmail.com"; Name = "My First Sequence"; }
+let s = { SequenceID = seqID; User = "email@gmail.com"; Name = "My First Sequence"; }
     
 let m =  { FormationID = formationID; Description = "markerone"; LocationX = 1.0; LocationY = 1.0; UIMarker = "TextBlock"; 
                ToolTipName = "" }
