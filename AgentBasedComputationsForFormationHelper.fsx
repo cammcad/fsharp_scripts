@@ -19,11 +19,11 @@ let MailerAgent = MailboxProcessor<_>.Start(fun s -> async {
             let! msg = s.Receive()
             match msg with
             | "Cameron" -> 
-                   sendMail "noreply@formationhelper.com" "cameron.frederick@gmail.com" "testing mailer agent" "Hello Cameron"
+                   sendMail "noreply@formationhelper.com" "someone@gmail.com" "testing mailer agent" "Hello Cameron"
             | "Rachel" ->
-                   sendMail "noreply@formationhelper.com" "rachel.frederick@gmail.com" "testing mailer agent" "Hello Rachel"
+                   sendMail "noreply@formationhelper.com" "another_someone@gmail.com" "testing mailer agent" "Hello Rachel"
             | "Katie" ->
-                    sendMail "noreply@formationhelper.com" "katiebug0826@live.com" "testing mailer agent" "Hello Katheryn"
+                    sendMail "noreply@formationhelper.com" "another_somone_else@live.com" "testing mailer agent" "Hello Katheryn"
             | _ -> printfn "Can't send email to %s" msg
         })
 
