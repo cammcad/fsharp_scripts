@@ -155,7 +155,7 @@ formationsCollection.Insert formbson
 markerCollection.Insert markerbson
 
 (* Find seq collection for given user "me" *)
-let qd = new QueryDocument(Bson_NameValue("UserName","cameron.frederick@gmail.com"))
+let qd = new QueryDocument(Bson_NameValue("UserName","email@gmail.com"))
 let qdseq = new QueryDocument(Bson_NameValue("SequenceID", seqID))
 let qdform = new QueryDocument(Bson_NameValue("FormationID", formationID))
 let sequences = sequencesCollection.Find qd
